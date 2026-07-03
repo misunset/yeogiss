@@ -1,0 +1,7 @@
+/* Webfonts — Noto Sans KR (Korean UI face) + Inter (Latin / numerics).
+   NOTE: loaded from Google Fonts CDN rather than bundled binaries.
+   If you need offline/self-hosted fonts, replace these @imports with @font-face
+   rules pointing at local .woff2 files and flag to the team. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');

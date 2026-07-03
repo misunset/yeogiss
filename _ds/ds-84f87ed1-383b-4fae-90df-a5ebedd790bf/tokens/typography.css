@@ -1,0 +1,57 @@
+/* ============================================================
+   TYPOGRAPHY — Untitled UI type scale, Korean-first.
+   Family: Noto Sans KR for UI; Inter for Latin/numeric fallback;
+   Roboto Mono for distances/codes.
+   ============================================================ */
+
+:root {
+  /* Families */
+  --font-sans: "Noto Sans KR", "Inter", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Weights */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium: 500; /* @kind other */
+  --fw-semibold: 600; /* @kind other */
+  --fw-bold: 700; /* @kind other */
+
+  /* Font sizes (px) — UUI scale */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --display-xs: 24px;
+  --display-sm: 30px;
+  --display-md: 36px;
+  --display-lg: 48px;
+  --display-xl: 60px;
+  --display-2xl: 72px;
+
+  /* Line heights (px) */
+  --lh-xs: 18px;
+  --lh-sm: 20px;
+  --lh-md: 24px;
+  --lh-lg: 28px;
+  --lh-xl: 30px;
+  --lh-display-xs: 32px;
+  --lh-display-sm: 38px;
+  --lh-display-md: 44px;
+  --lh-display-lg: 60px;
+  --lh-display-xl: 72px;
+  --lh-display-2xl: 90px;
+
+  /* Display tracking */
+  --tracking-display: -0.02em;
+}
+
+/* ---- Type specimen helper classes (used by spec cards & components) ---- */
+.t-display-md { font-size: var(--display-md); line-height: var(--lh-display-md); letter-spacing: var(--tracking-display); font-weight: var(--fw-bold); }
+.t-display-sm { font-size: var(--display-sm); line-height: var(--lh-display-sm); letter-spacing: var(--tracking-display); font-weight: var(--fw-bold); }
+.t-display-xs { font-size: var(--display-xs); line-height: var(--lh-display-xs); letter-spacing: var(--tracking-display); font-weight: var(--fw-semibold); }
+.t-xl  { font-size: var(--text-xl); line-height: var(--lh-xl); }
+.t-lg  { font-size: var(--text-lg); line-height: var(--lh-lg); }
+.t-md  { font-size: var(--text-md); line-height: var(--lh-md); }
+.t-sm  { font-size: var(--text-sm); line-height: var(--lh-sm); }
+.t-xs  { font-size: var(--text-xs); line-height: var(--lh-xs); }

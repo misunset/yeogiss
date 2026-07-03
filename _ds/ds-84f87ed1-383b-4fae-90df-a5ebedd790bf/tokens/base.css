@@ -1,0 +1,28 @@
+/* ============================================================
+   BASE — minimal reset + document defaults for the brand.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--lh-md);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure { margin: 0; }
+
+button { font-family: inherit; }
+
+a { color: var(--text-brand); text-decoration: none; }
+
+/* Numerics & distances read better with tabular Latin face */
+.tnum { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }

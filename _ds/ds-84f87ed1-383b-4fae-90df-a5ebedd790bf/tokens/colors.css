@@ -1,0 +1,176 @@
+/* ============================================================
+   COLORS — Untitled UI v1 palette (exact hex from the .fig)
+   Base ramps + semantic aliases + app-specific (marker) tokens.
+   ============================================================ */
+
+:root {
+  /* ---- Base ---- */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: rgba(255, 255, 255, 0);
+
+  /* ---- Gray (gray-blue, UUI "Gray") ---- */
+  --gray-25:  #fcfcfd;
+  --gray-50:  #f9fafb;
+  --gray-100: #f2f4f7;
+  --gray-200: #eaecf0;
+  --gray-300: #d0d5dd;
+  --gray-400: #98a2b3;
+  --gray-500: #667085;
+  --gray-600: #475467;
+  --gray-700: #344054;
+  --gray-800: #1d2939;
+  --gray-900: #101828;
+  --gray-950: #0c111d;
+
+  /* ---- Brand (purple — the signature Untitled UI hue) ---- */
+  --brand-25:  #fcfaff;
+  --brand-50:  #f9f5ff;
+  --brand-100: #f4ebff;
+  --brand-200: #e9d7fe;
+  --brand-300: #d6bbfb;
+  --brand-400: #b692f6;
+  --brand-500: #9e77ed;
+  --brand-600: #7f56d9;
+  --brand-700: #6941c6;
+  --brand-800: #53389e;
+  --brand-900: #42307d;
+  --brand-950: #2c1c5f;
+
+  /* ---- Blue (accent / info) ---- */
+  --blue-25:  #f5faff;
+  --blue-50:  #eff8ff;
+  --blue-100: #d1e9ff;
+  --blue-200: #b2ddff;
+  --blue-300: #84caff;
+  --blue-400: #53b1fd;
+  --blue-500: #2e90fa;
+  --blue-600: #1570ef;
+  --blue-700: #175cd3;
+  --blue-800: #1849a9;
+  --blue-900: #194185;
+  --blue-950: #102a56;
+
+  /* ---- Error (red) ---- */
+  --error-25:  #fffbfa;
+  --error-50:  #fef3f2;
+  --error-100: #fee4e2;
+  --error-200: #fecdca;
+  --error-300: #fda29b;
+  --error-400: #f97066;
+  --error-500: #f04438;
+  --error-600: #d92d20;
+  --error-700: #b42318;
+  --error-800: #912018;
+  --error-900: #7a271a;
+  --error-950: #55160c;
+
+  /* ---- Warning (orange) ---- */
+  --warning-25:  #fffcf5;
+  --warning-50:  #fffaeb;
+  --warning-100: #fef0c7;
+  --warning-200: #fedf89;
+  --warning-300: #fec84b;
+  --warning-400: #fdb022;
+  --warning-500: #f79009;
+  --warning-600: #dc6803;
+  --warning-700: #b54708;
+  --warning-800: #93370d;
+  --warning-900: #7a2e0e;
+  --warning-950: #4e1d09;
+
+  /* ---- Success (green) ---- */
+  --success-25:  #f6fef9;
+  --success-50:  #ecfdf3;
+  --success-100: #d1fadf;
+  --success-200: #a6f4c5;
+  --success-300: #6ce9a6;
+  --success-400: #32d583;
+  --success-500: #12b76a;
+  --success-600: #039855;
+  --success-700: #027a48;
+  --success-800: #05603a;
+  --success-900: #054f31;
+  --success-950: #053321;
+
+  /* ============================================================
+     SEMANTIC ALIASES (light)
+     ============================================================ */
+
+  /* Text */
+  --text-primary:        var(--gray-900);  /* headings, primary copy */
+  --text-secondary:      var(--gray-700);  /* labels */
+  --text-tertiary:       var(--gray-500);  /* supporting / hints */
+  --text-quaternary:     var(--gray-400);  /* placeholder */
+  --text-disabled:       var(--gray-400);
+  --text-on-brand:       var(--color-white);
+  --text-brand:          var(--brand-700);
+  --text-error:          var(--error-600);
+
+  /* Surfaces / backgrounds */
+  --bg-primary:          var(--color-white);
+  --bg-secondary:        var(--gray-50);
+  --bg-tertiary:         var(--gray-100);
+  --bg-brand:            var(--brand-600);
+  --bg-brand-subtle:     var(--brand-50);
+  --bg-disabled:         var(--gray-100);
+  --bg-overlay:          rgba(12, 17, 29, 0.5);     /* scrim behind sheets/modals */
+
+  /* Borders */
+  --border-primary:      var(--gray-300);
+  --border-secondary:    var(--gray-200);
+  --border-brand:        var(--brand-300);
+  --border-error:        var(--error-300);
+
+  /* Interactive (brand button) */
+  --brand-solid:         var(--brand-600);
+  --brand-solid-hover:   var(--brand-700);
+  --brand-solid-press:   var(--brand-800);
+  --focus-ring:          var(--brand-500);
+
+  /* ============================================================
+     APP TOKENS — bin-type marker colors (high contrast on maps).
+     Four vivid, mutually-distinct hues so pins read instantly over
+     yellow roads / green parks. Each has solid + soft surface + text.
+     ============================================================ */
+
+  /* 일반 General waste — brand purple */
+  --bin-general:         #7f56d9;
+  --bin-general-soft:    #f4ebff;
+  --bin-general-text:    #53389e;
+
+  /* 재활용 Recycling — green */
+  --bin-recycle:         #099250;   /* between success-600/700 for punch */
+  --bin-recycle-soft:    #d1fadf;
+  --bin-recycle-text:    #027a48;
+
+  /* 혼합 Mixed — blue */
+  --bin-mixed:           #1570ef;
+  --bin-mixed-soft:      #d1e9ff;
+  --bin-mixed-text:      #175cd3;
+
+  /* 담배꽁초 Cigarette butts — amber */
+  --bin-cigarette:       #e07706;   /* warning-600/500 blend for visibility */
+  --bin-cigarette-soft:  #fef0c7;
+  --bin-cigarette-text:  #b54708;
+
+  /* Map UI */
+  --map-here:            var(--blue-600);   /* "내 위치" dot */
+  --map-here-halo:       rgba(21, 112, 239, 0.18);
+}
+
+/* ============================================================
+   DARK MODE (optional) — scoped to [data-theme="dark"] / .dark
+   ============================================================ */
+:root[data-theme="dark"], .dark {
+  --text-primary:    var(--gray-50);
+  --text-secondary:  var(--gray-300);
+  --text-tertiary:   var(--gray-400);
+  --text-on-brand:   var(--color-white);
+  --bg-primary:      var(--gray-950);
+  --bg-secondary:    var(--gray-900);
+  --bg-tertiary:     var(--gray-800);
+  --border-primary:  var(--gray-700);
+  --border-secondary:var(--gray-800);
+  --bg-overlay:      rgba(0, 0, 0, 0.6);
+}
