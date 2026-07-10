@@ -398,14 +398,17 @@
         pseudoClasses.push(host.pseudoClass(key.slice(6), value));
         continue;
       }
-      if (kind !== "dom") {
+      // HTML parsing lowercases attr names (onClick -> onclick) before we ever see them,
+      // so this normalization must run for every kind, not just kind === "dom" — otherwise
+      // onClick="{{ handler }}" on an <x-import> component never reaches the component's props.
+      if (key.startsWith("on") && key.length > 2 && key[2] >= "a" && key[2] <= "z") {
+        key = EVENT_MAP[key] || "on" + key[2].toUpperCase() + key.slice(3);
+      } else if (kind !== "dom") {
         if (key.includes("-") && !(kind === "x-import" && (key.startsWith("aria-") || key.startsWith("data-"))))
           key = kebabToCamel(key);
       } else {
         if (key === "class") key = "className";
         else if (key === "for") key = "htmlFor";
-        else if (key.startsWith("on"))
-          key = EVENT_MAP[key] || "on" + key[2].toUpperCase() + key.slice(3);
       }
       propGetters.push([key, compileAttr(value)]);
     }
